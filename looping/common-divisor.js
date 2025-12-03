@@ -1,4 +1,4 @@
-//common divisors of two number num1,num2
+//common divisors of two numbers num1,num2
 
 var num1 = 12;
 var num2 = 24;
