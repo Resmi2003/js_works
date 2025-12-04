@@ -13,7 +13,18 @@ if(num%2==0){    // -4%2==0   True
 }
 
 else{
-    console.log("The number is odd.");
+    
+    if (num<0) {
+        console.log("The number is odd and negative.");
+        
+        
+    } 
+    
+    else {
+        console.log("The number is odd and positive.");
+        
+        
+    }
     
 }
 

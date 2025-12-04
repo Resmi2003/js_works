@@ -1,11 +1,11 @@
-var ch = "$";   // ch=$
+var character = "$";   // character=$
 
-if(ch>="a" && ch<="z" || ch>="A" && ch<="Z"){     // $>=a && $<=z || $>=A && $<=Z     False
+if(character>="a" && character<="z" || character>="A" && character<="Z"){     // $>=a && $<=z || $>=A && $<=Z     False
     console.log("It is a letter.");
     
 }
 
-else if(ch>=0 && ch<=9){       // $>=0 && $<=9   False
+else if(character>=0 && character<=9){       // $>=0 && $<=9   False
     console.log("It is a digit.");
     
 }
