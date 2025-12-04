@@ -1,3 +1,6 @@
+// Ask the user's age.Check if 18 or above.
+
+
 var age = 20;   // age=20
 
 if(age>=18){    // 20>=18 True

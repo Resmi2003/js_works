@@ -1,3 +1,6 @@
+// Check if input is a letter, digit, or special character.
+
+
 var character = "$";   // character=$
 
 if(character>="a" && character<="z" || character>="A" && character<="Z"){     // $>=a && $<=z || $>=A && $<=Z     False

@@ -1,3 +1,6 @@
+// Check whether a number is positive, negative, or zero.
+
+
 var num = -3;   // num=-3
 
 if(num>0){    //-3>0  False

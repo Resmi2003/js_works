@@ -1,3 +1,6 @@
+// Ask for two numbers. Print the greater one.
+
+
 var num1 = 8;    // num1=8
 var num2 = 5;    // num2=5
 

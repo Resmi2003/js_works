@@ -1,3 +1,6 @@
+// Check if a number is divisible by both 3 and 5.
+
+
 var num = 30;      // num=30
                             //   True      True
 if(num%3==0 && num%5==0){   // 30%3==0 && 30%5==0     True

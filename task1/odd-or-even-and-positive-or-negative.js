@@ -1,3 +1,6 @@
+// Check both even/odd and sign.
+
+
 var num = -4;   // num=-4
 
 if(num%2==0){    // -4%2==0   True

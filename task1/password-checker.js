@@ -1,3 +1,6 @@
+// If password == 'admin123',print access granted.
+
+
 dbPassword = "admin123";    // dbPassword=admin123
 userPassword = "admin123";   // userPassword=admin123
 
