@@ -12,4 +12,4 @@ while(number!=0){   // 153!=0 True  15!=0 True  1!=0 True 0!=0 False
 
 
 
-console.log(sum);   //sum=153
+console.log(sum);    //sum=153
