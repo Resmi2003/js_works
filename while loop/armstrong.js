@@ -1,4 +1,4 @@
-// Armstrong number and digit count
+// Armstrong number and digit count   (Check given number is armstrong or not)
 
 var number = 8208;   // number=8208
 var numberCopy = number;  //numberCopy=8208
