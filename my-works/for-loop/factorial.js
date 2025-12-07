@@ -1,0 +1,10 @@
+// find 5 factorial
+
+var number = 5;
+var fact = 1;
+
+for(let i=1;i<=number;i++){
+    fact = fact * i;
+}
+
+console.log(`Factorial of ${number}! is ${fact}`);
