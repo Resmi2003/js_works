@@ -1,3 +1,5 @@
+// Find Factorial
+
 var number = 5;   // number=5
 var fact = 1;     // fact=1
 var i = 1;        // i=1
@@ -7,4 +9,4 @@ while(i<=number){   // 1<=5 ->True   2<=5 ->True   3<=5 ->True   4<=5 ->True   5
     i++;            // i=2,3,4,5,6
 }
 
-console.log(`Factorial of ${number}!=${fact}`);   // factorial of 5! = 120
+console.log(`${number}! = ${fact}`);   // prints 5! = 120
