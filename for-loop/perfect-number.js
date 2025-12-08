@@ -1,6 +1,6 @@
 // perfect number
 // 6
-// 1,2,3=> 1+2+3=6   // the number's common divisors sum=number
+// 1,2,3=> 1+2+3=6   // the number's common divisor's sum = number  
 
 
 

@@ -1,4 +1,5 @@
 //  Vowel Count
+// Count the vowels in this text.
 
 var text = "helloworld";
 var vowelCount = 0;
