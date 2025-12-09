@@ -1,6 +1,4 @@
 // Palindrome Checker (Interactive)
-
-
 var word = "hello";
 var count = 0;
 
@@ -26,6 +24,5 @@ while(word!="level"){
    count++;
     
 }
-
 
 console.log("Palindrome found!");
