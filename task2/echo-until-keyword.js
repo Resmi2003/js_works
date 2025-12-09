@@ -8,7 +8,7 @@ while (text != "bye") {
 
 
 
-    if(text === "hai") {
+    if(text == "hai") {
         text = "how are you";
     } else if(text == "how are you") {
         text = "ok bye";

@@ -21,3 +21,8 @@ for(let ch of text){
 console.log("vowel-count",vowelCount);
 console.log("consonant-count",consonantCount);
 
+
+
+//  indexing support on array,string,object ; not support on number and boolean.
+// indexing means ;group of character of object into each character.
+

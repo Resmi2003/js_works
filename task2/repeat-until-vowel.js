@@ -5,7 +5,7 @@
 var character = "x";
 var count = 0;
 
-while (character !== "a" && character !== "e" && character !== "i" && character !== "o" && character !== "u") {
+while (character != "a" && character != "e" && character != "i" && character != "o" && character != "u") {
     console.log("Enter a character:");
     count++;
 
