@@ -1,6 +1,4 @@
 // password until correct
-
-
 var dbPassword = "opensesame";
 var userPassword = "opensesame";
 var count = 0;
