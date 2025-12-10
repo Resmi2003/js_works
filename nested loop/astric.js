@@ -10,6 +10,8 @@
 
 */
 
+// 4 row, 4 column
+
 
 for(let r=1;r<=4;r++){
 
