@@ -5,7 +5,6 @@
 // C  D  A  B
 // D  A  B  C
 
-
 for(let row=1;row<=4;row++){
 
     let pattern = "";
@@ -34,5 +33,4 @@ for(let row=1;row<=4;row++){
 
 
     console.log(pattern);
-    
 }
