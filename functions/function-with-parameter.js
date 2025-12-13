@@ -1,6 +1,6 @@
 // Function with parameter and not return value
 
-// FunctionName greeting
+// functionName greeting
 function greetings(name){
 
     console.log(`Good morning ${name}`);
@@ -12,7 +12,7 @@ greetings("Kavya");
 
 
 
-// FunctionName addNumber
+// functionName addNumber
 function addNumber(num1,num2){
 
     console.log(`Addition result=${num1+num2}`);
@@ -24,7 +24,7 @@ addNumber(300,500);
 
 
 
-// Subtract(100,20)
+// subtract(100,20)
 function subtractNumber(num1,num2){
 
     console.log(`Subtraction results=${num1-num2}`);
