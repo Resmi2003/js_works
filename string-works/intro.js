@@ -11,13 +11,13 @@ trim()                    // to remove white space from string...eliminate slash
 trimStart()               // only remove left space
 trimEnd()                 // only remove right space.
 padEnd()      // if there are 25 company names,but 16 only there so for remaining we can set characters. only for right side.
-padStart()
+padStart()    // same as padEnd . but this is for left side.
 */ 
 
 
 // negative index- 76543210987654321(17 negative indexes)
 var companyName = " Luminar Technolab ";
-// positive index  01234567890123456  = 17 characters total
+// positive index  0123456789012345678  = 17 characters total excluding space.if put space,then count that also.
 
 var companyName2 = "Luminar";
 
@@ -47,7 +47,7 @@ console.log(`new string:${companyName.trimStart()}....`);   // only removes left
 
 console.log(`new string:${companyName.trimEnd()}....`);   // only removes right space. prints new string: Luminar Technolab....
 
-console.log(companyName.padEnd(25,"$"));
+console.log(companyName.padEnd(25,"$"));    // prints Luminar Technolab $$$$$$
 
 
 
