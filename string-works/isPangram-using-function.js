@@ -1,3 +1,4 @@
+// In exam, the things I marked as // will only give. Inside that we need to fill. We are not able to edit or change the 3 default things marked here.
 
 function isPangram(word){              //
 

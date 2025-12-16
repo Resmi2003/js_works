@@ -1,5 +1,5 @@
 // Repeat(count)-> string
 
-var test = "hello";
-var newTest = test.repeat(3);   // this 3 is how many times we need to repeat.
-console.log(newTest);
+var text = "hello";
+var newText = text.repeat(3);   // this 3 is how many times we need to repeat.
+console.log(newText);

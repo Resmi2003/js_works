@@ -1,4 +1,4 @@
-
+// In exam the things i marked as // will only give. others we neeed to fill . not able to change these 3 default things here.just adding in it is only possible.
 
 function isPalindromeWord(word) {      // 
 
