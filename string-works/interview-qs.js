@@ -1,3 +1,8 @@
+// 1. obtain ABC1237YZ
+// 2. In all 3rd positions put X. That is obtain ABX12X7YX
+// word and challengeCode is only given in question
+
+
 var word = "ABC123";
 var challengeCode = "7YZ";
 
