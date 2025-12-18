@@ -21,9 +21,11 @@
 
 
 // set
-// no order
+// set is used when we need to store unique values (no duplicates).
+// keeps order
 // duplicate not allowed
-//not have index
+// not have index
+// mutable
 
 
 var colors = ["red","blue","black"];
