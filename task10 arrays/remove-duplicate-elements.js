@@ -22,8 +22,5 @@ for (let i = 0; i < numbers.length; i++) {
         nonDuplicate[index] = numbers[i];
         index++;
     }
-
-
 }
-
 console.log(nonDuplicate);
