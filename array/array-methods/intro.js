@@ -1,5 +1,5 @@
 // Array methods
-
+// Array is an object. We use curly brackets like string.it is predefined.no need to put by we.
 
 // var array={
 //  length,
@@ -33,28 +33,28 @@
 // index -     0         1            2        3      4
 var foods = ["dosa","chappathy","friedrice","dosa","meals"];
 
-// push
+// push(value)
 // foods.push("arabian-rice");
 // console.log(foods);
 
 
 
 
-// pop
+// pop()
 //  foods.pop();
 //  console.log(foods);
  
 
 
 
-// unshift
+// unshift(value)
 //  foods.unshift("tea");
 //  console.log(foods);
 
 
 
 
-// shift
+// shift()
 // foods.shift();
 // console.log(foods);
 
@@ -76,7 +76,12 @@ var foods = ["dosa","chappathy","friedrice","dosa","meals"];
 // let pos=foods.indexOf("friedrice");
 // console.log(pos);
 
-// lastIndexof(value)
+
+
+// lastIndexOf(value)
+// let position = foods.lastIndexOf("dosa");
+// console.log(position);
+
 
 
 

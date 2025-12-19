@@ -1,13 +1,3 @@
-// arrow function 
-// arrow function means       normal function => arrow function
-// syntax
-// variable = (p1,p2,p3...)=>expression
-// variable = (p1,p2,p3...)=>{              // curly bracket is used if there are multiple expressions.Then if used curly bracket then return is mandatory.
-     // return expression
-//    }
-
-
-
 // add
 let add = (n1,n2)=>n1+n2;
 console.log(add(1,2));
@@ -51,18 +41,6 @@ console.log(isOdd(3));
 // isEven
 let isEven = (n)=>n%2==0;
 console.log(isEven(2));
-
-
-
-
-
-
-
-
-// hoisting
-// during lexical time,it moves function to top
-// normal function hoist
-// arrow function not hoist
 
 
 
