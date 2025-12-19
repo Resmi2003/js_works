@@ -7,7 +7,7 @@ for(let n of numbers){
 
     if(n<0){
 
-        result.push(-1);
+        result.unshift(-1);
     }
 
     else{
