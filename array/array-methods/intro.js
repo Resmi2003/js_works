@@ -18,7 +18,9 @@
 
 //  Extracting a portion
 //  slice(start,end)
-//  splice()
+
+//  splice(index from start delete,how many want to delete) modifies original array.thats why not put leftside variable.
+// 
 
 //  advanced array methods  (this will uses arrow functions.thats it is called as advanced array methods)
 //  Map()
@@ -30,8 +32,8 @@
 //  sort()
 
 
-// index -     0         1            2        3      4
-var foods = ["dosa","chappathy","friedrice","dosa","meals"];
+// index -     0         1            2        3      4        5
+var foods = ["dosa","chappathy","friedrice","dosa","coffee","meals"];
 
 // push(value)
 // foods.push("arabian-rice");
@@ -97,9 +99,25 @@ var foods = ["dosa","chappathy","friedrice","dosa","meals"];
 
 
 // slice(start,end)    this not modify original array, it gives another array.
-var position = foods.slice(0,3);
-console.log(position);     // look output of this
+// var position = foods.slice(0,3);
+// console.log(position);     // look output of this
+// console.log(foods);
+
+
+
+
+
+
+// splice(start index,delete count,in delete place what to fill)
+// splice(index from start delete,how many want to delete). Modifies original array.thats why not put leftside variable.
+
+// foods.splice(1,2);
+// console.log(foods);
+
+foods.splice(1,1,"alfham");
 console.log(foods);
+
+
 
 
    
