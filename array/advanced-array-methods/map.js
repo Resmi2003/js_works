@@ -1,5 +1,6 @@
 // map() is used when we need to apply functionality in all objects in an array.
-
+// in map(), the first parameter represents the current element and the second parameter represents its index. so n1*n2 means value multiplied by its index.
+// 3rd parameter of map is array.
 
 var numbers = [10,11,12,13,14,15,16];
 
