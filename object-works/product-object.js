@@ -11,6 +11,8 @@ var product = {
 console.log(product.title);
 console.log(product["title"]);
 
+// product["color"] = "blue"    // to change color ie replace
+
 
 
 
