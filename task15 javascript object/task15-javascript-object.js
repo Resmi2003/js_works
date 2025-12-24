@@ -14,6 +14,7 @@ console.log("Course :",student.course);
 
 
 // 2. Access and display the name property from an object.
+console.log("Display name property :");
 console.log("Name :",student.name);
 
 
