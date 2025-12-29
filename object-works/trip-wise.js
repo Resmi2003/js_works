@@ -47,7 +47,7 @@ for(let key in expenses){
 
 
 // split
-var split = total/Object.entries(expenses).length;         // total/users
+var split = total/Object.entries(expenses).length;         // total/number of users   // object.entries used to convert object into array.because object don't support length. so if we put like this then we will get count.
 console.log("Individual split",split);
 
 
@@ -57,8 +57,8 @@ var splitWise = {}
 
 for(let user in expenses){
 
-    let amount = expenses[user];
-    splitWise[user] = split - amount;
+    let amount = expenses[user];     // for getting how much that person paid
+    splitWise[user] = split - amount;   // spliwise of a user is the amount that user has to give or receive after equal bill splitting.
 }
 
-console.log(splitWise);
+console.log(splitWise);   // in it's output, -ve number means the amount they will receive. and positive means the amount they need to pay.
