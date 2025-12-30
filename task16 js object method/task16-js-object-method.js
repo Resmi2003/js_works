@@ -257,11 +257,6 @@ var merged = {...employee1,...employee2};   // here it is object, that's why we 
 console.log(merged);
 
 
-// 22. Freeze an object using Object.freeze().
-// 23. Check whether an object is frozen.
-// 24. Prevent adding new properties using Object.seal().
-// 25. Check whether an object is sealed.
-// 26. Explain the difference between Object.freeze() and Object.seal().
 // 27. Create a method inside an object and call it.
 console.log("method inside an object :");
 
@@ -294,8 +289,6 @@ var passenger = {
 passenger.greet();
 
 
-// 29. Create an object with multiple methods.
-// 30. Convert an object into a JSON string.
 // 31. Write a program to find the sum of all numeric values in an object.
 console.log("sum of all numeric values :");
 // numeric values means numbers only, that is integers or decimals. eg: 100,3.14,-50.
@@ -356,6 +349,26 @@ console.log("Original Object:", original);
 console.log("Cloned Object:", clone);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 22. Freeze an object using Object.freeze().
+// 23. Check whether an object is frozen.
+// 24. Prevent adding new properties using Object.seal().
+// 25. Check whether an object is sealed.
+// 26. Explain the difference between Object.freeze() and Object.seal().
+// 29. Create an object with multiple methods.
+// 30. Convert an object into a JSON string.
 // 34. Check if an object is empty.
 // 35. Sort object properties by values.
 // 36. Find the key with the highest value in an object.
