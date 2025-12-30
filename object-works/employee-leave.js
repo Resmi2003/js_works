@@ -22,13 +22,13 @@ const employeeLeave = {
 
 
 
-
+// Print the leave count of manoj.
 console.log("leave count of manoj",employeeLeave.manoj);
 
-
+// Print all employee names.
 console.log("all emplyees name",Object.keys(employeeLeave));
 
-
+// Print all leave counts.
 console.log("list leaves",Object.values(employeeLeave));
 
 console.log("total number of employees",Object.entries(employeeLeave).length);
