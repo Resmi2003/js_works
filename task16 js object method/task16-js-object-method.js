@@ -337,8 +337,130 @@ console.log("Original Object:", original);
 console.log("Cloned Object:", clone);
 
 
+// 34. Check if an object is empty.
+console.log("Check if an object is empty :");
+
+var item = {}   // if this object has properties, then the output will be Object is not empty.
+
+if(Object.keys(item).length==0){
+    console.log("Object is empty");
+    
+}
+
+else{
+    console.log("Object is not empty");
+    
+}
 
 
+// 35. Sort object properties by values.
+console.log("Sort object properties by values :");
+
+var marks = {
+    student1 : 30,
+    student2 : 10,
+    student3 : 20
+
+}
+
+ var sortedMarks = Object.entries(marks).sort((s1,s2)=>s1[1]-s2[1]);
+console.log(sortedMarks);
+
+
+// 36. Find the key with the highest value in an object.
+console.log("key with the highest value in an object :");
+
+var salaries = {
+    divya : 30000,
+    kavya : 20000,
+    indira : 60000,
+    roshni : 60000
+
+}
+
+var highestValue = Object.entries(salaries).reduce((s1,s2)=>s1[1]>s2[1]?s1:s2);
+// console.log(highestValue);
+var highestValueKey = Object.entries(salaries).filter(s1=>s1[1]==highestValue[1]);
+console.log(highestValueKey);
+
+
+// 37. Convert an object to an array and vice versa.
+console.log("Convert an object to an array and vice versa :");
+
+var fruits = {
+    apple : 20,
+    orange : 40,
+    guava : 50,
+    watermelon : 70
+
+}
+
+console.log("object into array");
+
+var array = Object.entries(fruits);
+console.log(array);
+
+console.log("array into object");
+
+var objectNew = Object.fromEntries(array);
+console.log(objectNew);
+
+
+// 38. Count the number of times each character appears in a string using an object.
+console.log("Count the number of times each character appears in a string using an object :");
+
+var string = "javascript";
+var emptyObject = {}
+
+for(let ch of string){
+
+    if(ch in emptyObject){
+        emptyObject[ch] += 1;
+    }
+
+    else{
+        emptyObject[ch] = 1;
+    }
+}
+
+console.log(emptyObject);
+
+
+// 40. Use destructuring to extract object properties.
+console.log("Use destructuring to extract object properties :");
+
+var newStudent = {
+    name : "dhanya",
+    age : 20,
+    id : 123,
+    dept : "cse",
+    college : "ies"
+
+}
+
+var {name,age,id,dept,college} = newStudent;    // use curly brackets for object destructuring and square brackets for array destructuring.
+console.log(name,age,id,dept,college);
+
+
+// 42. Loop through an object and print only string values.
+console.log("Loop through an object and print only string values :");
+
+var newUser = {
+    name : "indira",
+    age : 21,
+    roll : 47,
+    course : "mearn",
+    college : "ies"
+
+}
+
+for(let key in newUser){
+
+    if(typeof newUser[key]=="string"){
+        console.log(newUser[key]);
+        
+    }
+}
 
 
 
@@ -357,15 +479,8 @@ console.log("Cloned Object:", clone);
 // 26. Explain the difference between Object.freeze() and Object.seal().
 // 29. Create an object with multiple methods.
 // 30. Convert an object into a JSON string.
-// 34. Check if an object is empty.
-// 35. Sort object properties by values.
-// 36. Find the key with the highest value in an object.
-// 37. Convert an object to an array and vice versa.
-// 38. Count the number of times each character appears in a string using an object.
 // 39. Create a student object and calculate total and average marks using methods.
-// 40. Use destructuring to extract object properties.
 // 41. Rename a property using destructuring.
-// 42. Loop through an object and print only string values.
 // 43. Write a function that accepts an object and returns only numeric properties.
 // 44. Convert nested objects into a flat object.
 // 45. Compare two objects and find common properties.
