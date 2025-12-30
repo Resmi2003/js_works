@@ -154,6 +154,68 @@ var totalPrice = books.reduce((total,b)=>total+b.price,0)
 console.log(totalPrice);
 
 
+// display books in alphabetical order
+console.log("books in alphabetical order :");
+
+books.sort((b1,b2)=>b1.title.localeCompare(b2.title));    // localeCompare is a string method . it is used to get in alphabetical order.
+console.log(books);     // here it is in ascending order
+
+
+// display languages of books and it's count.  like {english :2 , malayalam :3} 
+// language summary
+console.log("language summary :");
+
+var languageCount = {}
+
+for(let b of books){
+
+  let lang = b.language;
+
+  if(lang in languageCount){
+    languageCount[lang] += 1;
+  }
+
+  else{
+    languageCount[lang] = 1;
+  }
+
+}
+
+console.log(languageCount);
+
+
+// language with most number of books
+console.log("language with most number of books :");
+
+var mostNumber = Object.entries(languageCount).reduce((l1,l2)=>l1[1]>l2[1]?l1:l2);
+console.log(mostNumber);
+
+
+// language with minimum number of books
+console.log("language with minimum number of books :");
+
+var leastNumber = Object.entries(languageCount).reduce((l1,l2)=>l1[1]<l2[1]?l1:l2);
+console.log(leastNumber);
+
+
+
+
+
+
+// array of object is javascript native data type
+// list of dictionary is python native data type
+// data transfer format is json
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 

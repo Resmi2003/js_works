@@ -82,29 +82,17 @@ console.log(count);
 // 10. Convert an object into an array of keys.
 console.log("convert object into array of keys :");
 
-for(let key in person){
-    
-}
-
 console.log(Object.keys(person));
 
 
 // 11. Convert an object into an array of values.
 console.log("convert object into array of values :");
 
-for(let value in person){
-
-}
-
 console.log(Object.values(person));
 
 
 // 12. Convert an object into an array of key–value pairs.
 console.log("convert object into array of key-value pairs :");
-
-for(let [k,v] in person){
-
-}
 
 console.log(Object.entries(person));
 
@@ -253,8 +241,8 @@ var employee2 = {
 
 }
 
-var merged = {...employee1,...employee2};   // here it is object, that's why we put it in curly brackets {}. If it is array or string, then put it in square brackets [].
-console.log(merged);
+var merged1 = {...employee1,...employee2};   // here it is object, that's why we put it in curly brackets {}. If it is array or string, then put it in square brackets [].
+console.log(merged1);
 
 
 // 27. Create a method inside an object and call it.
@@ -277,7 +265,7 @@ passenger.greet();
 console.log("this keyword inside an object method :");
 // this keyword refers to the current object.
 
-var passenger = {
+var passenger1 = {
     name : "Indira",
     age : 22,
     greet : function(){
@@ -286,7 +274,7 @@ var passenger = {
     }
 }
 
-passenger.greet();
+passenger1.greet();
 
 
 // 31. Write a program to find the sum of all numeric values in an object.
