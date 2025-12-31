@@ -202,6 +202,8 @@ console.log(leastNumber);
 
 
 
+
+
 // array of object is javascript native data type
 // list of dictionary is python native data type
 // data transfer format is json
