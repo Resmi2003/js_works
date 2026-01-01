@@ -153,23 +153,34 @@ console.log(sorted);
 
 
 // priority summary wrt owner
+// we need each owner's total amount in need and want
 console.log("priority summary wrt owner :");
 
-var priorityOwnerSummary = {};
+var ownerPrioritySummary= {};
+// {roshan:{need:312,want:0}, jazeel:{need:0,want:300}}
 
-for (let t of expenses) {
+
+for(let t of expenses){
+
     let owner = t.owner;
-    let priority = t.priority;
     let amount = t.amount;
+    let priority = t.priority;
 
-    if (!(owner in priorityOwnerSummary)) {
-        priorityOwnerSummary[owner] = { need: 0, want: 0 };
+    if(owner in ownerPrioritySummary){
+        ownerPrioritySummary[owner][priority] += amount;
     }
 
-    priorityOwnerSummary[owner][priority] ++;
+    else{
+        if(priority=="need"){
+            ownerPrioritySummary[owner] = {"need":amount,"want":0};
+        }
+        else{
+            ownerPrioritySummary[owner] = {"need":0,"want":amount}
+        }
+    }
 }
 
-console.log(priorityOwnerSummary);
+console.log(ownerPrioritySummary);
 
 
 // payment methods
