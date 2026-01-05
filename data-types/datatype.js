@@ -15,6 +15,31 @@ var data = null;
 console.log(typeof(data));
 
 
+console.log(typeof("resmi"));
+
+console.log(typeof a);
+
+console.log(typeof(null));
+
+console.log(typeof(undefined));
+
+console.log(typeof true);
+
+console.log(typeof(number));
+
+console.log(typeof(null=="object"));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -72,7 +72,7 @@ console.log(jobTitles);
 // 2. Create an array of company names in uppercase.
 console.log(" Create an array of company names in uppercase :");
 
-companyNameUppercase = jobs.map(j=>j.companyName.toUpperCase());
+var companyNameUppercase = jobs.map(j=>j.companyName.toUpperCase());
 console.log(companyNameUppercase);
 
 
@@ -161,13 +161,156 @@ console.log(totalDeveloper);
 
 
 // 15. Create an object that shows total vacancies by role. (Example: { Developer: 25, Manager: 10 })
+console.log("Create an object that shows total vacancies by role. (Example: { Developer: 25, Manager: 10 }) :");
+
+var developerRoleSummary = {}
+
+for(let j of jobs){
+
+  let role = j.role;
+  let noOfVacancy = j.noOfVacancy;
+
+  if(role in developerRoleSummary){
+    developerRoleSummary[role] += noOfVacancy;
+  }
+
+  else{
+    developerRoleSummary[role] = noOfVacancy;
+  }
+}
+
+console.log(developerRoleSummary);
+
+
 // 16. Find the company with the highest total vacancies.
+console.log("Find the company with the highest total vacancies :");
+
+var companyNameSummary = {}
+
+for(let j of jobs){
+
+  let companyName = j.companyName;
+  let noOfVacancy = j.noOfVacancy;
+
+  if(companyName in companyNameSummary){
+    companyNameSummary[companyName] += noOfVacancy;
+
+  }
+
+  else{
+    companyNameSummary[companyName] = noOfVacancy;
+
+  }
+  
+}
+
+  // console.log(companyNameSummary);
+
+  var highestCompany = "";
+  var maxVacancy = 0;
+
+  for(let company in companyNameSummary){
+
+    if(companyNameSummary[company]>maxVacancy){
+      maxVacancy = companyNameSummary[company];
+      highestCompany = company;
+
+    }
+
+  }
+
+  console.log(highestCompany,maxVacancy);
+  
+
 // 17. Count how many jobs are available per company.
+console.log("Count how many jobs are available per company :");
+
+var companySummary = {}
+
+for(let j of jobs){
+
+  let company = j.companyName;
+  let noOfVacancyInCompany = j.noOfVacancy;
+
+  if(company in companySummary){
+    companySummary[company] += noOfVacancyInCompany;
+  }
+
+  else{
+    companySummary[company] = noOfVacancyInCompany;
+  }
+}
+
+console.log(companySummary);
+
+
 // 18. Create an object that groups jobs by role.
+console.log("Create an object that groups jobs by role :");
+
+var roleSummary = {}
+
+for(let j of jobs){
+
+  let role = j.role;
+  let title = j.title;
+
+  if(role in roleSummary){
+    roleSummary[role].push(title);
+  }
+
+  else{
+    roleSummary[role] = [title];
+  }
+}
+
+console.log(roleSummary);
+
+
 // 19. Sort jobs by number of vacancies (ascending order).
+console.log("Sort jobs by number of vacancies (ascending order) :");
+
+jobs.sort((j1,j2)=>j1.noOfVacancy-j2.noOfVacancy);
+console.log(jobs);
+
+
 // 20. Sort jobs by number of vacancies (descending order).
+console.log("Sort jobs by number of vacancies (descending order) :");
+
+jobs.sort((j1,j2)=>j2.noOfVacancy-j1.noOfVacancy);
+console.log(jobs);
+
+
 // 21. Sort jobs by job title alphabetically.
+console.log("Sort jobs by job title alphabetically :");
+
+jobs.sort((j1,j2)=>j1.title.localeCompare(j2.title));
+console.log(jobs);
+
+
 // 22. Sort jobs by company name in reverse alphabetical order.
+console.log(" Sort jobs by company name in reverse alphabetical order :");
+
+jobs.sort((j1,j2)=>j2.companyName.localeCompare(j1.companyName));
+console.log(jobs);
+
+
 // 23. Check if any job requires the skill "Django".
+console.log("Check if any job requires the skill Django :");
+
+var isSkillDjango = jobs.some(j=>j.skills.includes("Django"));
+console.log(isSkillDjango);
+
+
 // 24. Check if all jobs have at least 1 vacancy.
+console.log("Check if all jobs have at least 1 vacancy :");
+
+var isAtleastOneVacancy = jobs.every(j=>j.noOfVacancy>=1);    // every() is used to check all elements 
+console.log(isAtleastOneVacancy);
+
+
 // 25. Find the first job where the role is "Manager".
+console.log("Find the first job where the role is Manager :");
+
+var firstJob = jobs.find(j=>j.role=="Manager");
+console.log(firstJob);
+

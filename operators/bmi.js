@@ -1,4 +1,4 @@
-// bmi=weight_in_kg/ height_in_meter^2
+// bmi=weight_in_kg/ height_in_meter^2     // body mass index
 
 var weightInKg = 55;
 
