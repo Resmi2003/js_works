@@ -1,6 +1,7 @@
 var number = 100;
 
 number = number + 1; // number++
+// number++;
 console.log(number);
 
 

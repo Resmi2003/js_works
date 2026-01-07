@@ -95,8 +95,6 @@ console.log(countDigits(1234));
 // 11. Write a program with a nested function where the inner function accesses a variable from the outer function and prints it.
 console.log("Write a program with a nested function where the inner function accesses a variable from the outer function and prints it :");
 
-// 11. Nested function accessing outer variable
-
 function outerFunction() {
   let message = "Hello";
 
@@ -138,7 +136,26 @@ calculate((10),(5));
 // 13. Write a nested function example to demonstrate function scope in JavaScript.
 // 14. Create a function counter() using a nested function that increments and returns a count each time it is called.
 // 15. Write a program using nested functions to find the square and cube of a given number.
+
+
 // 16. Create a function greetUser(name) with a nested function that returns a personalized greeting message.
+console.log("Create a function greetUser(name) with a nested function that returns a personalized greeting message :");
+
+function greet(username){
+
+    function message(text){
+
+        return `hello ${username} ${text}`;   
+
+    }
+
+    return message;
+
+}
+
+console.log(greet("vipin")("goodmorning"));
+
+
 // 17. Write a nested function that validates a password using an inner function to check length and special characters.
 // 18. Create a nested function to calculate the total and average of an array of numbers.
 // 19. Write a program using nested functions where the inner function is returned and called later (closure concept).

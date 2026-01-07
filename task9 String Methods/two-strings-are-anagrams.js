@@ -2,7 +2,7 @@
 
 function checkAnagram(word1, word2) {
 
-    if (word1.length !== word2.length) {
+    if (word1.length != word2.length) {
         return false;
     }
 
@@ -10,7 +10,7 @@ function checkAnagram(word1, word2) {
 
     for (let ch of word1) {
 
-        let index = word2.indexOf(ch);
+        let index = word2.indexOf(ch);   
 
         if (index == -1) {
             isAnagram = false;

@@ -1,7 +1,9 @@
-var word = "racecar";
+// reverse a string
+
+var word = "hai";
 var result = "";
 
-for(let i=6;i>=0;i--){
+for(let i=2;i>=0;i--){
 
     result = result + word[i];
 }
