@@ -313,20 +313,134 @@ console.log(foodNameAndPrice);
 
 
 // 3. Create an array of all cuisines in uppercase.
+console.log("Create an array of all cuisines in uppercase :");
+
+var cuisines = foods.map(f=>f.cuisine.toUpperCase());
+console.log(cuisines);
+
+
 // 4. Create an array of objects containing id and name only.
+console.log("Create an array of objects containing id and name only :");
+
+var idAndName = foods.map(f=>({id:f.id,name:f.name}));
+console.log(idAndName);
+
+
 // 5. Create an array that shows only the prices of all foods.
+console.log("Create an array that shows only the prices of all foods :");
+
+var prices = foods.map(f=>f.price);
+console.log(prices);
+
+
 // 6. List all vegetarian foods.
+console.log("List all vegetarian foods :");
+
+var allVegetarian = foods.filter(f=>f.isVeg);
+console.log(allVegetarian);
+
+
 // 7. List all foods that belong to the "Main Course" category.
+console.log("List all foods that belong to the Main Course category :");
+
+var categoryMainCourse = foods.filter(f=>f.category=="Main Course");
+console.log(categoryMainCourse);
+
+
 // 8. Find all foods with price less than 100.
-// 9. 9. List all foods whose cuisine is "Indian".
+console.log("Find all foods with price less than 100 :");
+
+var priceLessThanHundred = foods.filter(f=>f.price<100);
+console.log(priceLessThanHundred);
+
+
+// 9.  List all foods whose cuisine is "Indian".
+console.log("List all foods whose cuisine is Indian :");
+
+var cuisineIndian = foods.filter(f=>f.cuisine=="Indian");
+console.log(cuisineIndian);
+
+
 // 10. Find all foods that contain "Chicken" as an ingredient.
+console.log("Find all foods that contain Chicken as an ingredient :");
+
+var ingredientChicken = foods.filter(f=>f.ingredients.some(i=>i.item=="Chicken"));
+console.log(ingredientChicken);
+
+
 // 11. Find the total price of all food items.
+console.log("Find the total price of all food items :");
+
+var totalPrice = foods.reduce((total,f)=>total+f.price,0);
+console.log(totalPrice);
+
+
 // 12. Find the average price of vegetarian foods.
+console.log("Find the average price of vegetarian foods :");
+
+var vegetarianFoods = foods.filter(f=>f.isVeg);
+var totalPriceOfVegetarianFoods = vegetarianFoods.reduce((total,f)=>total+f.price,0);
+var averagePriceOfVegetarianFoods = totalPriceOfVegetarianFoods/vegetarianFoods.length;
+console.log(averagePriceOfVegetarianFoods);
+
+
 // 13. Create an object that shows total number of foods by category. Example: { Breakfast: 4, Snack: 6 }
+console.log("Create an object that shows total number of foods by category. Example: { Breakfast: 4, Snack: 6 } :");
+
+var foodCountByCategory = foods.reduce((acc, f) => (acc[f.category] = (acc[f.category] || 0) + 1, acc),{});
+console.log(foodCountByCategory);
+
+
 // 14. Create an object that shows total price by cuisine.
+console.log("Create an object that shows total price by cuisine :");
+
+var totalPriceByCuisine = foods.reduce((acc, f) => {acc[f.cuisine] = (acc[f.cuisine] || 0) + f.price;
+  return acc;
+}, {});
+
+console.log(totalPriceByCuisine);
+
+
 // 15. Find the most expensive food item.
+console.log("Find the most expensive food item :");
+
+var expensivePrice = foods.reduce((f1,f2)=>f1.price>f2.price?f1:f2);
+var expensiveFoodItem = foods.filter(f1=>f1.price==expensivePrice.price);
+console.log(expensiveFoodItem);
+
+
 // 16. Sort all foods by price (ascending order).
+console.log("Sort all foods by price (ascending order) :");
+
+foods.sort((f1,f2)=>f1.price-f2.price);
+console.log(foods);
+
+
 // 17. Sort all foods by price (descending order).
+console.log("Sort all foods by price (descending order) :");
+
+foods.sort((f1,f2)=>f2.price-f1.price);
+console.log(foods);
+
+
 // 18. Sort foods by name alphabetically (A–Z).
+console.log("Sort foods by name alphabetically (A-Z) :");
+
+foods.sort((f1,f2)=>f1.name.localeCompare(f2.name));
+console.log(foods);
+
+
 // 19. Sort foods by category alphabetically.
+console.log("Sort foods by category alphabetically :");
+
+foods.sort((f1,f2)=>f1.category.localeCompare(f2.category));
+console.log(foods);
+
+
 // 20. Sort foods by cuisine in reverse alphabetical order.
+console.log("Sort foods by cuisine in reverse alphabetical order :");
+
+foods.sort((f1,f2)=>f2.cuisine.localeCompare(f1.cuisine));
+console.log(foods);
+
+

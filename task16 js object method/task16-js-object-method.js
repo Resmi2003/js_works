@@ -465,22 +465,182 @@ for(let key in newUser){
 
 
 
-
-
-
-
-
-
-
 // 22. Freeze an object using Object.freeze().
+console.log("Freeze an object :");
+
+var product = {
+  name: "Laptop",
+  price: 50000
+};
+
+Object.freeze(product);   // Object.freeze() is used to make an object completely read-only. When we don’t want anyone to change the object, Object.freeze() is used. 1. New properties cannot be added to the object. 2. Existing properties cannot be modified. 3. Existing properties cannot be deleted.
+
+product.price = 60000;   // so here this is not allowed because not able to modify.
+product.brand = "HP";    // so here this also not allowed because not able to add.
+
+console.log(product);
+
+
 // 23. Check whether an object is frozen.
+console.log("Check if object is frozen :");
+
+console.log(Object.isFrozen(product));    // Frozen means: the object cannot be changed. here, we are checking whether the object is already frozen or not. Object.isFrozen() is used to check if an object is frozen. A frozen object cannot be changed. If the object is frozen, it returns true. If the object is not frozen, it returns false. ie, If an object is frozen, it means the object cannot be changed.
+
+
 // 24. Prevent adding new properties using Object.seal().
+console.log("Seal an object :");
+
+var vehicle = {
+  type: "Car",
+  brand: "Honda"
+};
+
+Object.seal(vehicle);      // Object.seal() is used to lock the structure of an object. New properties cannot be added to a sealed object. Existing properties cannot be deleted. Existing property values can be modified. It is used when keys should remain the same but values are allowed to change. 
+
+vehicle.brand = "Hyundai"; // allowed
+vehicle.color = "Red";    // not allowed
+
+console.log(vehicle);
+
+
 // 25. Check whether an object is sealed.
+console.log("Check if object is sealed :");
+
+console.log(Object.isSealed(vehicle));  // Object.isSealed() is used to check whether an object is sealed or not. If the object is sealed, it returns true. If the object is not sealed, it returns false.
+
+
 // 26. Explain the difference between Object.freeze() and Object.seal().
+console.log("Difference between freeze and seal :");
+
+console.log("freeze: cannot add, delete or modify properties");
+console.log("seal: cannot add or delete, but can modify");
+
+
 // 29. Create an object with multiple methods.
+console.log("Object with multiple methods :");   // An object with multiple methods means an object that contains more than one function. Each method performs a different task.
+
+var calculator = {
+  add: function(a, b) {
+    return a + b;
+  },
+  sub: function(a, b) {
+    return a - b;
+  }
+};
+
+console.log(calculator.add(10, 5));
+console.log(calculator.sub(10, 5));
+
+
 // 30. Convert an object into a JSON string.
+console.log("Object to JSON string :");
+
+var user = {
+  name: "Anu",
+  age: 22,
+  city: "Thrissur"
+};
+
+var jsonString = JSON.stringify(user);  // JSON.stringify() is used to convert a JavaScript object into a JSON string. It is mainly used to send data to a server or store data. The original object is not changed.
+console.log(jsonString);
+
+
 // 39. Create a student object and calculate total and average marks using methods.
+console.log("Total and average marks :");
+
+var student = {
+  maths: 80,
+  physics: 70,
+  chemistry: 90,
+
+  total: function() {
+    return this.maths + this.physics + this.chemistry;
+  },
+
+  average: function() {
+    return this.total() / 3;
+  }
+};
+
+console.log("Total:", student.total());
+console.log("Average:", student.average());
+
+
 // 41. Rename a property using destructuring.
+console.log("Rename property using destructuring :");   // destructuring is used to take values out of an object and store them in separate variables.
+
+var employee = {
+  name: "Riya",
+  salary: 30000
+};
+
+var { name: employeeName, salary } = employee;
+console.log(employeeName, salary);
+
+
 // 43. Write a function that accepts an object and returns only numeric properties.
+console.log("Return only numeric properties :");
+
+function getNumericProps(obj) {
+  var result = {};
+  for (let key in obj) {
+    if (typeof obj[key] == "number") {
+      result[key] = obj[key];
+    }
+  }
+  return result;
+}
+
+var data = {
+  name: "Maya",
+  age: 22,
+  score: 90
+};
+
+console.log(getNumericProps(data));
+
+
 // 44. Convert nested objects into a flat object.
+console.log("Convert nested object to flat object :");  // Flat object means converting a nested object (an object inside another object) into a single-level object. In simple words: all keys and values are brought to the top level, so there are no inner objects.
+
+var person = {
+  name: "Anu",
+  address: {
+    city: "Thrissur",
+    state: "Kerala"
+  }
+};
+
+var flat = {
+  name: person.name,
+  city: person.address.city,
+  state: person.address.state
+};
+
+console.log(flat);
+
+
 // 45. Compare two objects and find common properties.
+console.log("Common properties between two objects :");
+
+var obj1 = {
+  a: 10,
+  b: 20,
+  c: 30
+};
+
+var obj2 = {
+  b: 20,
+  c: 40,
+  d: 50
+};
+
+var common = {};
+
+for (let key in obj1) {
+  if (key in obj2 && obj1[key] == obj2[key]) {
+    common[key] = obj1[key];
+  }
+}
+
+console.log(common);

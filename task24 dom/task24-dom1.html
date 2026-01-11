@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1 id="head">DOM getElementById()</h1>
+
+    <p id="first">This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+
+    <button class="btn" onclick="changeColor('green')">green</button> <button class="btn" onclick="changeColor('blue')">blue</button> <button class="btn" onclick="changeColor('red')">red</button>
+
+    <script>
+
+
+     // getElementById()
+     const documentId = document.getElementById('head')
+     console.log(documentId);
+     documentId.style.color = "blue"
+
+     // querySelectorAll()
+     const querybtn = document.querySelectorAll('.btn')
+     console.log(querybtn);
+
+     // getElementById()
+     function changeColor(color){
+        let firstLine = document.getElementById('first')
+        firstLine.style.color = color;
+     }
+
+     
+    </script>
+    
+</body>
+</html>

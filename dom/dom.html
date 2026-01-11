@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="head">DOM MANIPULATION</h1>
+
+    <ul>
+        <li class="cls">document.getElementById()</li>
+        <li>document.getElementsByClassName()</li>
+        <li>document.getElementsByTagName()</li>
+        <li class="cls">document.querySelector()</li>
+        <li>document.querySelectorAll()</li>
+    </ul>
+
+
+    <button class="btn" onclick="btnClick()">Submit</button>
+       
+
+    <script>
+        // document.getElementById()
+        const documentId=document.getElementById('head')    // after passing id, elementne geteyyanam. we can put anything instead of head.
+        console.log(documentId);
+        documentId.style.color="red"
+
+        // // document.getElementsByClassName()
+        // const documentClass =document.getElementsByClassName('cls')       // using class multiple elements can be passed.
+        // console.log(documentClass);
+
+        // // convert HTML collection to Array     // because we are not able to apply color for html collection(ie, many elements because we used class). so we convert them into array.
+        // console.log(Array.from(documentClass));    // Array.from is used to convert to array.
+        // console.log(Array.from(documentClass).map(item=>item.style.color="green"));
+
+        // document.getElementsByTagName()
+        const documentTag=document.getElementsByTagName('li')
+        console.log(documentTag);
+        // convert HTML collection to Array
+        console.log([...documentTag]);
+        console.log([...documentTag].map(item=>item.style.color="green"));
+
+        // document.querySelector()
+        const query=document.querySelector('li')   // querySelector is used to select only tag (to select a single element) // more effective , querySelectorAll also
+        console.log(query);       // here only first li tag will appear as output.
+
+        // document.querySelector()
+        const queryId = document.querySelector('#head')
+        console.log(queryId);
+        
+
+        // document.querySelectorAll()
+        const queryAll=document.querySelectorAll('li')    // querySelectorAll is used to select tag and id etc ....can combine all.here we dont took id.but its possible.
+        console.log(queryAll);     // here all li tag will appear in output. so takes multiple elements.
+
+        // document.querySelectorAll()
+        const queryCls = document.querySelectorAll('.cls')
+        console.log(queryCls);
+        
+
+        const querybtn = document.querySelector('.btn')
+        console.log(querybtn);
+
+        function btnClick(){
+            alert("button clicked")
+        }
+                
+        
+        
+    </script>
+    
+</body>
+</html>
