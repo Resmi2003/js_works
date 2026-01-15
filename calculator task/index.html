@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- css cdn -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- fontawesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">
+            <div class="child1">
+                <h2 class="canon">CANON</h2>
+
+                <div class="parentbox"><input id="result" class="box"></input><div class="box1"><i class="fa-solid fa-delete-left"></i></div>
+</div>
+
+                <div class="buttonparent">
+                    <button onclick="clearBox()">AC</button>
+                    <button onclick="removeLastItem()">DEL</button>
+                    <button onclick="displayNumber('%')">%</button>
+                    <button onclick="displayNumber('/')">/</button><br>
+                    <button onclick="displayNumber(7)">7</button>
+                    <button onclick="displayNumber(8)">8</button>
+                    <button onclick="displayNumber(9)">9</button>
+                    <button onclick="displayNumber('*')">*</button><br>
+                    <button onclick="displayNumber(4)">4</button>
+                    <button onclick="displayNumber(5)">5</button>
+                    <button onclick="displayNumber(6)">6</button>
+                    <button onclick="displayNumber('-')">-</button><br>
+                    <button onclick="displayNumber(1)">1</button>
+                    <button onclick="displayNumber(2)">2</button>
+                    <button onclick="displayNumber(3)">3</button>
+                    <button onclick="displayNumber('+')">+</button><br>
+                    <button onclick="displayNumber(0)">0</button>
+                    <button onclick="displayNumber('00')">00</button>
+                    <button onclick="displayNumber('.')">.</button>
+                    <button onclick="evaluateExp()">=</button><br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+</body>
+<!-- js cdn -->
+<script src="./script.js"></script>
+</html>

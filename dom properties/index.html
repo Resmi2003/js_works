@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent</title>
+</head>
+<body>
+     <!-- html code -->
+    <!-- parentNode : Returns the parent node of an element. -->
+     <div id="parent">
+        <div id="child">Parent</div>
+     </div>
+
+     <!-- childNodes : Return the nodelist of an element. -->
+      <ul id="divelement">
+        <li>Child</li>
+        <li>Child</li>
+        <li>Child</li>
+        <li>Child</li>
+      </ul>
+
+      <!-- innerHTML - sets a content to HTML DOM. -->  
+       <div id="elmnt">
+        <p>Web Developer</p>
+       </div>
+
+       <!-- textContent - sets a text content to html dom. -->
+        <div id="text">
+            <h2>WebDeveloper</h2>
+        </div>
+
+
+     <!-- javascript code -->
+     <script>
+         
+         // parentNode : Returns the parent node of an element.
+        const childElement = document.getElementById('child');
+        console.log(childElement);
+        const parentElement = childElement.parentNode;  // childElement here used because we are taking parent using childElement.
+        console.log(parentElement);
+
+        // childNodes : Return the nodelist of an element.
+        const parentElmnt = document.getElementById('divelement');     // nodelist is associated with parent . here we converting child into a list.
+        console.log(parentElmnt);
+        const childElmnt = parentElmnt.childNodes;   // here nodes in childNodes because there are multiple elements. childNodes used because we are finding childNodes here.
+        console.log(childElmnt);
+
+        // innerHTML - sets a content to HTML DOM. tag,card,table anything can display using innerHTML. // here setting js content to html . here, we must use same id we put in html.otherwise it will not work.
+        const divElemnt = document.getElementById("elmnt");
+        console.log(divElemnt);    // this gives Web Developer as output
+        divElemnt.innerHTML = '<h1 style="color:blue">Luminar Technolab</h1>'     // this gives Luminar Technolab as output. here, we are replacing html content Web Developer to js content Luminar Technolab.
+
+        // textContent - sets a text content to html dom. here only text can be displayed or changed.
+        const textElmnt = document.getElementById('text');
+        console.log(textElmnt);   // here output is WebDeveloper
+        textElmnt.textContent = "MEARN STACK WEB DEVELOPER";    // here output is MEARN STACK WEB DEVELOPER. here only content in text changes, tag does not change. ie, it is not h2 tag.
+
+
+                
+     </script>
+    
+</body>
+</html>

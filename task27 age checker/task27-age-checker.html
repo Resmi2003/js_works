@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full w-full bg-white flex justify-center items-center">
+
+    <div class="w-[450px] h-[300px] bg-amber-300 mt-[40px] border border-black border-[5px]">
+        <h1 class="text-4xl font-semibold mt-[30px] ml-[32px]">Age Checker</h1>
+        <input id="ageValue" placeholder="Enter your age"
+            class="p-3 w-[370px] h-[40px] ms-auto me-auto ml-[32px] mt-[30px] bg-white rounded-[5px]"></input>
+        <div class="mt-[30px]"><button onclick="ageChecker()"
+                class="w-[90px] h-[50px] border border-green-700 text-cyan-600 hover:bg-cyan-400 hover:text-black font-medium rounded-[4px] text-xl ml-[32px]">Check</button>
+        </div>
+        <p id="result" class="ml-[32px] mt-[20px] font-medium"></p>
+    </div>
+
+    <script>  // in the html code, for input we put an id. also for button put onclick. also created a new p tag under button to store the output result.
+        function ageChecker() {
+            const userAge = document.getElementById('ageValue').value;
+            const result = document.getElementById('result');
+
+            if (userAge >= 18) {
+                result.textContent = "Eligible";
+                result.style.color = "green";
+            }
+            else {
+                result.textContent = "Not Eligible";
+                result.style.color = "red";
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

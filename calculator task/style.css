@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.parent{
+    background-color: #eef2f7;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    background-color: #7b8a97;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.child1{
+    background-color: #f8fafc;
+    width: 350px;
+    height: 450px;
+    border-radius: 12px;
+}
+
+.canon{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #334155;
+    /* letter-spacing: 1px; */
+    font-family: 'Arial Black', sans-serif;
+}
+
+.parentbox{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.box{
+    width: 250px;
+    height: 40px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+}
+
+.box1{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 6px;
+    background-color: #e2e8f0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.buttonparent{
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.buttonparent button{
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 6px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+}
+
+.buttonparent button:nth-child(4),
+.buttonparent button:nth-child(8),
+.buttonparent button:nth-child(12),
+.buttonparent button:nth-child(16){
+/* .buttonparent button:nth-child(20){ */
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.buttonparent button:nth-child(1),
+.buttonparent button:nth-child(2){
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.buttonparent button:nth-child(20){
+    background-color: #1d4ed8;
+    color: white;
+}
+
+.buttonparent button:hover{
+    filter: brightness(0.95);
+    transform: scale(1.03);
+}
+
+.box1 i{
+    margin-top: 12px;
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <!-- bootstrap cdn -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+     <div class="container">
+    <h1 class="text-primary text-center m-5">Random Number Generation</h1>
+    <div class="text-center">
+     <button class="m-5 btn btn-primary" onclick="randomnum()">Random Number</button>
+
+    </div>
+
+   </div>
+
+    <script>
+
+        function randomnum(){
+            const randomNumber = Math.floor(Math.random()*100);  // Math.random() generates a random decimal number, and Math.floor() converts it into a whole number by removing the decimal part.
+            console.log(randomNumber);
+            alert("your random number is :" + randomNumber);  // alert() – Used to invoke a mini window with a message => alert(“Welcome to Luminar Technolab”)
+
+            
+        }
+    </script>
+    
+</body>
+</html>
