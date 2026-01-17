@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full h-full bg-cyan-950 flex items-center justify-center">
+
+    <div class="w-[935px] h-[375px] bg-slate-500 rounded-[5px] mt-[200px]">
+
+<div class="text-center mt-[20px]">
+    <textarea id="result" class="bg-white w-[900px] h-[80px] rounded-[5px] pl-[20px] pb-[40px] text-slate-950 font-medium pt-[5px]" placeholder="Type here..."></textarea>
+</div>  
+
+<div class="text-center mt-[16px]">
+   <button onclick="display(1)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">1</button>
+   <button onclick="display(2)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">2</button>
+   <button onclick="display(3)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">3</button>
+   <button onclick="display(4)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">4</button>
+   <button onclick="display(5)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">5</button>
+   <button onclick="display(6)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">6</button>
+   <button onclick="display(7)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">7</button>
+   <button onclick="display(8)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">8</button>
+   <button onclick="display(9)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">9</button>
+   <button onclick="display(0)" class="border border-white rounded-[10px] w-[70px] h-[40px] text-white hover:bg-white hover:text-black">0</button>
+   <button onclick="backspace()" class="bg-black text-white rounded-[10px] w-[155px] h-[40px] hover:bg-red-700">backspace</button>
+</div>
+
+<div class="text-center mt-[10px]">
+    <button onclick="display('-')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">-</button> 
+    <button onclick="display('+')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">+</button>
+    <button onclick="display('!')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">!</button>
+    <button onclick="display('@')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">@</button>
+    <button onclick="display('#')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">#</button>
+    <button onclick="display('$')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">$</button>
+    <button onclick="display('%')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">%</button>
+    <button onclick="display('^')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">^</button>
+    <button onclick="display('&')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">&</button>
+    <button onclick="display('*')" class="border border-white rounded-[10px] w-[86px] h-[40px] text-white hover:bg-white hover:text-black">*</button>
+</div>
+
+<div class="text-center mt-[10px]">
+    <button onclick="caps()" class="bg-black text-white rounded-[10px] w-[151px] h-[40px] hover:bg-red-700">Caps</button>
+    <button onclick="displayLetter('Q')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">Q</button>
+    <button onclick="displayLetter('W')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">W</button>
+    <button onclick="displayLetter('E')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">E</button>
+    <button onclick="displayLetter('R')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">R</button>
+    <button onclick="displayLetter('T')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">T</button>
+    <button onclick="displayLetter('Y')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">Y</button>
+    <button onclick="displayLetter('U')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">U</button>
+    <button onclick="displayLetter('I')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">I</button>
+    <button onclick="displayLetter('O')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">O</button>
+    <button onclick="displayLetter('P')" class="border border-white rounded-[10px] w-[55px] h-[40px] text-white hover:bg-white hover:text-black">P</button>
+    <button onclick="enter()" class="bg-black text-white rounded-[10px] w-[152px] h-[40px] hover:bg-red-700">Enter</button>
+</div>
+
+<div class="text-center mt-[10px]">
+    <button onclick="displayLetter('A')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">A</button>
+    <button onclick="displayLetter('S')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">S</button> 
+    <button onclick="displayLetter('D')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">D</button>
+    <button onclick="displayLetter('F')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">F</button>
+    <button onclick="displayLetter('G')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">G</button>
+    <button onclick="displayLetter('H')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">H</button>
+    <button onclick="displayLetter('J')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">J</button>
+    <button onclick="displayLetter('K')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">K</button>
+    <button onclick="displayLetter('L')" class="border border-white rounded-[10px] w-[96px] h-[40px] text-white hover:bg-white hover:text-black">L</button>
+</div>
+
+<div class="text-center mt-[10px]">
+    <button onclick="displayLetter('Z')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">Z</button>
+    <button onclick="displayLetter('X')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">X</button>
+    <button onclick="displayLetter('C')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">C</button>
+    <button onclick="displayLetter('V')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">V</button>
+    <button onclick="displayLetter('B')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">B</button>
+    <button onclick="displayLetter('N')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">N</button>
+    <button onclick="displayLetter('M')" class="border border-white rounded-[10px] w-[92px] h-[40px] text-white hover:bg-white hover:text-black">M</button>
+    <button onclick="space()" class="bg-black rounded-[10px] w-[225px] h-[40px] text-white hover:bg-red-700">Space</button>
+</div>
+
+    </div>
+
+    
+</body>
+<!-- js cdn -->
+ <script src="./virtual-keyboard.js"></script>
+
+</html>

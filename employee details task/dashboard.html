@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full w-full bg-cyan-100">
+
+    <div class="flex justify-between">
+        <h1 id="head1" class="text-3xl text-blue-700 font-semibold mt-[20px] ml-[20px]">Welcome</h1>
+        <button onclick="logout()"
+            class="w-[70px] h-[40px] bg-red-500 text-white font-semibold rounded-[5px] mt-[20px] mr-[20px]">Logout</button>
+    </div>
+
+    <h1 class="text-4xl text-blue-700 font-semibold text-center">Employee Details</h1>
+
+    <div class="flex">
+        <div class="ml-[500px]">
+            <div class="text-center">
+
+                <input id="empid" type="text" placeholder="Employee Id"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+                <input id="empname" type="text" placeholder="Employee Name"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+                <input id="empaddr" type="text" placeholder="Employee Address"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+                <input id="empdesg" type="text" placeholder="Employee Designation"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+                <input id="empexp" type="text" placeholder="Employee Experience"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+                <input id="empsal" type="text" placeholder="Employee Salary"
+                    class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+
+                <button onclick="addEmployee()" class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] border text-center border-blue-900 text-blue-900 font-semibold">Add
+                    Employee</button>
+            </div>
+        </div>
+
+        <div>
+            <input id="emp" type="text" placeholder="Search Id"
+                class="mt-[20px] pl-[10px] w-[420px] h-[35px] ml-[45px] rounded-[3px] bg-white text-gray-900"></input><br>
+
+            <button onclick="search()" class="w-[60px] h-[40px] bg-blue-700 text-white ml-[50px] mt-[20px] rounded-[5px] font-semibold">Search</button>
+
+            <div id="result"></div>
+
+        </div>
+    </div>
+
+</body>
+<!-- js cdn -->
+<script src="./dashboard.js"></script>
+
+</html>
+
+<!-- here we put id for all inputs. also for first h1 tag put id="head1". also for add employee button we put onclick="addEmployee()". also for search button put onclick="search()" . also for logout button put onclick="logout()"-->
+ <!-- also for last input search id, we put an id="emp" -->
+  <!-- also empty div created with id="result" for storing result , in this result the content we want to display will appear, we can display it in any form like table,card,modal etc-->
