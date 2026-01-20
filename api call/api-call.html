@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full w-full">
+
+    <h1 class="text-blue-700 text-center font-bold text-3xl mt-[40px]">ToDo Data</h1>
+
+    <center>
+        <table class="border border-3 border-blue-700 mt-[20px]">
+            <thead>
+                <tr>
+                    <th class="border border-3 border-blue-700 p-3">userId</th>
+                    <th class="border border-3 border-blue-700 p-3">Id</th>
+                    <th class="border border-3 border-blue-700 p-3">Title</th>
+                    <th class="p-3">Completed</th>
+                </tr>
+            </thead>
+            
+<!-- id="result" below is to store result -->
+            <tbody id="result"></tbody>
+
+        </table>
+
+    </center>
+
+    <script>
+
+        // AJAX API CALL
+
+        // 1. Create a new XMLHTTPRequest Object
+        const response = new XMLHttpRequest();    // we use new keyword to create an object.
+
+
+        // 2. Connect to API Call         // then connect it to a url (connect to server who give data)
+        response.open('get','https://jsonplaceholder.typicode.com/todos');    // to get the data we want. open is predefined method. open(method in string,api data url ie the data we want its link it is also in string) // evdyo etho serverlu irikunna datene namk DOM lu display cheyyikkanam. for that aa data avdann kondverunnath kanikkanam...athinu venditanu ivde get method use cheythirikkunnath.
+// for getting api data url search json placeholder in google. then scroll down and take todos.so a data in json format will appear(if not there take raw data).then copy its url (http link from top of browser). then paste that url here.
+// to check if it is connected, inspect=> type response in console.then enter. so we can see xmlhttprequest object. readystate 1 means open kodthente bhagham aayit means namde request avde generate cheythu. readyState-1 => request generate cheythu. readyState-2=> head ath receive cheythu. readyState-3 => aa data avde load cheythu(processing stage). readyState-4 => done.(request done,data will return response). 2 and 3 we will not see. it is done internally, automatically execute.
+
+        // 3. Send       // then need to send request
+        response.send();  // then again type response in console. so readyState changes from 1 to 4. click arrow in XMLHttpRequest , there is response and responseText, so in responseText our content will appear. ie, our api data we take from google.
+
+
+        // 4. Set OnreadystateChange     // readyState te changenu anusarich aanu data verunnath. so aa datene display cheyyikkaanayit ingotekk edukkanam. // XMLHttpRequest kondoyit oru state change identify cheyth athine avde printith display cheyyikanam.
+        response.onreadystatechange = () => {    // created onreadystatechange. need to return this data when readyState value becomes 4. // readyState 4 lu mathre namk response kittullu.
+
+            if(response.readyState == 4){
+                if(response.status > 199 && response.status < 300){    // status is status code to understand to user. it is not manadatory. 199 and 300 because to get 200 series only.200,201,202....etc like that. any in these can expect. 
+                    console.log(response.responseText);    // consolelu responseText vannitundonnu nokkan veendit. so our complete json like format data we took from google will appear in console.
+
+                    const todoArray = JSON.parse(response.responseText);  // we need to get json data which is in json string to javascript object. so we use parse to convert string to object.  
+                    console.log(todoArray);   // then in console that array will appear {...}{...} like this.in that click arrow on 100 to 99. so our data  in object will appear (key,value pairs).
+                    displayData(todoArray);   // then need to display this in our browser (in our running original screen page). // this displayData is we defined in step 5.
+                    
+                    
+                }
+            }   
+        }
+
+
+        // 5. Display array of data into the browser
+        function displayData(todoArray){    // need to pass todoArray as argument inside displayData function then call function. then only it will display. 
+            for(let todo of todoArray){    // for loop to take each object one by one from array. // htmlData is a variable.
+                htmlData = `  <tr>         
+                    <td class="border border-3 border-blue-700"> ${todo.userId}  </td>
+                    <td class="border border-3 border-blue-700"> ${todo.id}  </td>
+                    <td class="border border-3 border-blue-700"> ${todo.title}  </td>
+                    <td class="border border-3 border-blue-700"> ${todo.completed}  </td>
+                    </tr>  `
+
+
+                    result.innerHTML += htmlData;  // if equalto only used then only first row will appear. put += for all rows.
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

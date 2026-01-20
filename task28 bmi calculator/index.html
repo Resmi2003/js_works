@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <div class="min-h-screen bg-[url('images/background.jpg')] bg-cover bg-center bg-fixed relative">
+
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <div class="relative z-10 flex flex-col items-center pt-12">
+
+            <h1 class="text-6xl font-bold px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl text-white">
+                BMI Calculator
+            </h1>
+
+            <h3 class="text-4xl font-semibold mt-4 text-white">
+                Body Mass Index
+            </h3>
+
+            <div class="mt-10">
+                <img src="./images/bmi-range.jpg" alt=""
+                    class="w-[370px] h-[200px] object-contain rounded-2xl shadow-xl bg-white/10">
+            </div>
+
+            <form id="bmiForm" class="mt-10 w-[360px] bg-white/50 backdrop-blur-md p-8 rounded-3xl space-y-5">
+
+                <div>
+                    <p class="font-semibold mb-2">Gender</p>
+                    <div class="flex gap-6">
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="gender" value="Male">
+                            Male
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="radio" name="gender" value="Female">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="font-semibold block mb-1">Age</label>
+                    <input id="age" type="number" placeholder="Enter age"
+                        class="w-full px-3 py-2 rounded-lg border outline-none bg-white">
+                </div>
+
+                <div>
+                    <label class="font-semibold block mb-1">Weight (kg)</label>
+                    <input id="weight" type="number" placeholder="Enter weight"
+                        class="w-full px-3 py-2 rounded-lg border outline-none bg-white">
+                </div>
+
+                <div>
+                    <label class="font-semibold block mb-1">Height (cm)</label>
+                    <input id="height" type="number" placeholder="Enter height"
+                        class="w-full px-3 py-2 rounded-lg border outline-none bg-white">
+                </div>
+
+                <div class="flex gap-4 pt-2">
+                    <button onclick="calculateBMI()" type="button"
+                        class="flex-1 bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300">
+                        Calculate
+                    </button>
+                    <button type="button" onclick="resetBMI()" class="flex-1 bg-gray-300 py-2 rounded-lg font-semibold hover:bg-gray-400 transition-colors duration-300">
+                        Reset
+                    </button>
+                </div>
+
+                <!-- this div below is for storing final result -->
+                <div id="result" class="mt-6 text-center font-bold text-xl"></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+<!-- js cdn -->
+<script src="./script.js"></script>
+
+</html>

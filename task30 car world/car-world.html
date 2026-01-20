@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car World</title>
+    <!-- tw cdn -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="h-full w-full bg-cyan-100">
+
+    <h1 class="text-3xl font-bold mt-[30px] text-center">CAR WORLD</h1>
+<div class="flex justify-evenly mt-[30px]">
+    
+    <div class="bg-zinc-50 w-[430px] h-[480px] rounded-[10px] ml-[20px]">
+        <p class="font-bold text-lg pl-[50px] pt-[50px]">Car Name</p>
+        <input id="name" class="bg-white border border-gray-800 rounded-[5px] w-[320px] h-[40px] ml-[50px] mt-[5px] pl-[10px] font-semibold text-gray-900" type="text" placeholder="car brand">
+        <p class="font-bold text-lg pl-[50px] pt-[40px]">Car Price</p>
+        <input id="price" class="bg-white border border-gray-800 rounded-[5px] w-[320px] h-[40px] ml-[50px] mt-[5px] pl-[10px] font-semibold text-gray-900" type="text" placeholder="price">
+        <p class="font-bold text-lg pl-[50px] pt-[40px]">Key</p>
+        <input id="key" class="bg-white border border-gray-800 rounded-[5px] w-[320px] h-[40px] ml-[50px] mt-[5px] pl-[10px] font-semibold text-gray-900" type="text" placeholder="key">
+        <div class="text-center mt-[25px]">
+        <button onclick="storeData()" class="text-white font-bold w-[100px] h-[40px] bg-black rounded-[10px]">Store Data</button>
+        </div>
+    </div>
+
+    <div class="bg-zinc-50 w-[430px] h-[480px] rounded-[10px] ml-[20px]">
+        <p class="font-bold text-lg pl-[50px] pt-[50px]">Retrieve key</p>
+        <input id="retrieveKey" class="bg-white border border-gray-800 rounded-[5px] w-[320px] h-[40px] ml-[50px] mt-[5px] pl-[10px] font-semibold text-gray-900" type="text" placeholder="Enter key to retrieve item">
+        <div class="text-center mt-[25px]">
+        <button onclick="retrieveData()" class="text-white font-bold w-[130px] h-[40px] bg-black rounded-[10px]">Retrieve Data</button>
+        </div>
+        <!-- div below is for storing result -->
+         <div id="result"></div>
+    </div>
+
+    <div class="bg-zinc-50 w-[430px] h-[480px] rounded-[10px] ml-[20px]">
+        <p class="font-bold text-lg pl-[50px] pt-[50px]">Remove Data</p>
+        <input id="removeKey" class="bg-white border border-gray-800 rounded-[5px] w-[320px] h-[40px] ml-[50px] mt-[5px] pl-[10px] font-semibold text-gray-900" type="text" placeholder="Enter key to remove item">
+        <div class="text-center mt-[25px]">
+        <button onclick="removeData()" class="text-white font-bold w-[120px] h-[40px] bg-black rounded-[10px]">Remove Data</button>
+        </div>
+        <!-- div below is for storing result -->
+         <div id="removeResult" class="mt-6 text-center"></div>
+
+    </div>
+</div>
+
+<div class="text-center mt-[40px]">
+<button onclick="clearAllRecords()" class="bg-white text-black font-bold w-[1430px] h-[40px] text-xl rounded-[10px]">Clear All Record</button>
+</div>
+
+
+
+    
+</body>
+
+<!-- js cdn -->
+ <script src="./car-world.js"></script>
+
+</html>
