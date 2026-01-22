@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full h-full">
+    <h1 class="text-3xl text-center mt-4 font-bold">TODO LIST</h1>
+
+    <table class="border border-4 border-black mt-5 ms-auto me-auto">
+        <thead>
+            <tr>
+                <th class="border border-4 border-black p-2">UserId</th>
+                <th class="border border-4 border-black p-2">Id</th>
+                <th class="border border-4 border-black p-2">Title</th>
+                <th class="border border-4 border-black p-2">Completed</th>
+            </tr>
+        </thead>
+         
+        <!-- this id="result" is for storing result -->
+        <tbody id="result"></tbody>
+
+    </table>
+    
+</body>
+
+<!-- js code -->
+<script>
+
+    // API CALL (instead of AJAX)  // same API we done in api-call.html   // more easy than AJAX. // both methods give same output.
+
+    // 1. fetch() - Asynchronous event - response ->  .then     // promiselu ulla methods aanu then and catch. so no need to put promise. we can directly use then and catch to settle them. it also returns promise.
+    fetch('https://jsonplaceholder.typicode.com/todos')  //  fetch is by default get. fetch can only do get. ie, datene getiya. fetch('url we need'). this is syntax of fetch. // then next step is fetchith edtha datene kond veranam. athinu vendi usiyunnathanu then. then is success case. 2 case und, data fetchiyumbo data kittanum kitathirikkanum chance und, kitukayanenkil avde enth veranamennu ullath then vech kodkkunnu.
+          .then(data=>(data.json()))    // now response is in pending  // hide console.log  // first we put .then(data=>console.log(data)); data is just a parameter, we can put anything in it's place. then right click -> inspect -> console -> we can see response, click it's arrow, so we can see it's status:200 , but body and headers are not readable form, so we can convert that into readable form. now it is like body: ReadableStream ,locked: false. now nammde case success aayittund, karanam status: 200 vannitund, that means nammde data avdekk kittiyittund. so then we need to convert this data into array format. so athinu vendi usiyunna method aanu .json (dot json). after putting this in console a promise with arrow will appear , it is now in pending, Promise {<pending>},click it's arrow, promise state is fulfilled and promise result is Array(200). after clicking 100-199 arrow can can see our data as array of data format. so here pending changed to fulfilled and got array of data. so fetch success aayi data kitti.  first case epozhum pending verullu, ennit success aanenki fulfilledilek povum, error aanenki rejectedlekk povum. request povunna oru phasene aanu pending state nnu parayunnath.
+          .then(todos=>displayContent(todos))  // displayContent is defined in step 2. 
+          .catch(err=>console.log(err))        // err is a parameter we can put anything in its place. it is just to console the error. ie, if we add or delete like any change we put to our link we took from site, then data fetchavilla. so in console, TypeError: Failed to fetch at todo will come.    
+
+
+    // 2. Display content in html    // this is same step we do in api-call.html(AJAX).
+    function displayContent(todos){  // need to pass todos as argument inside displayContent function then call function. then only it will display.
+        htmlData = ``; // empty string  
+        for(let todo of todos){      // for loop to take each object one by one from array. // htmlData is a variable, if put without var also work. // in the td class, things we put like todo.userId, todo.Id etc must be same as the data we put from jsonplaceholder, because that's our data. if anything put wrong, then it will not work. so copy from that data and paste here.
+            htmlData = ` <tr> 
+                <td class="border border-3 border-black">${todo.userId}</td>
+                <td class="border border-3 border-black">${todo.id}</td>
+                <td class="border border-3 border-black">${todo.title}</td>
+                <td class="border border-3 border-black">${todo.completed}</td>
+                </tr>  `
+
+                result.innerHTML += htmlData;  // if equalto only used then only first row will appear. put += for all rows.
+
+        }
+
+    }
+
+</script>
+
+</html>

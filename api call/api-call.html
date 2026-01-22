@@ -67,9 +67,9 @@
 
         // 5. Display array of data into the browser
         function displayData(todoArray){    // need to pass todoArray as argument inside displayData function then call function. then only it will display. 
-            for(let todo of todoArray){    // for loop to take each object one by one from array. // htmlData is a variable.
+            for(let todo of todoArray){    // for loop to take each object one by one from array. // htmlData is a variable, if put without var also work. // in the td class, things we put like todo.userId, todo.Id etc must be same as the data we put from jsonplaceholder, because that's our data. if anything put wrong, then it will not work. so copy from that data and paste here.
                 htmlData = `  <tr>         
-                    <td class="border border-3 border-blue-700"> ${todo.userId}  </td>
+                    <td class="border border-3 border-blue-700"> ${todo.userId}  </td>   
                     <td class="border border-3 border-blue-700"> ${todo.id}  </td>
                     <td class="border border-3 border-blue-700"> ${todo.title}  </td>
                     <td class="border border-3 border-blue-700"> ${todo.completed}  </td>
