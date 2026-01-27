@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,17 +19,32 @@
         <div class="mx-[150px] mt-10 border border-gray-500 h-[78px] w-[80px] rounded-[50%]"><i
                 class="fa-solid fa-building-columns text-6xl"></i></div>
         <h3 class="text-2xl font-bold text-black text-center mt-4">My Bank</h3>
-        <input type="text" class="w-[300px] h-[45px] bg-white rounded-[20px] ml-[39px] mt-6 pl-5 text-xl text-gray-900"
+
+        <!-- login-acc -->
+        <input id="login-acc" type="text"
+            class="w-[300px] h-[45px] bg-white rounded-[20px] ml-[39px] mt-6 pl-5 text-xl text-gray-900"
             placeholder="Account number">
-        <input type="text" class="w-[300px] h-[45px] bg-white rounded-[20px] ml-[39px] mt-6 pl-5 text-xl text-gray-900"
+
+        <!-- login-pass -->
+        <input id="login-pass" type="password"
+            class="w-[300px] h-[45px] bg-white rounded-[20px] ml-[39px] mt-6 pl-5 text-xl text-gray-900"
             placeholder="Password">
-        <div class="text-center"><button
+
+        <!-- loginUser -->
+        <div class="text-center"><button onclick="loginUser()"
                 class="bg-blue-500 text-white hover:text-black w-[300px] h-[45px] text-lg rounded-[20px] mt-8 font-bold">Login</button>
         </div>
-        <div class="text-center mt-5"><a href="./login.html" class="text-blue-600 w-[300px] h-[45px] text-base mt-3">Forgot password?</a> Or <button class="text-blue-600">Sign up</button></div>
-        
+
+        <!-- goToRegisterFromLogin -->
+        <div class="text-center mt-5"><a href="./login.html"
+                class="text-blue-600 w-[300px] h-[45px] text-base mt-3">Forgot password?</a> Or <button
+                onclick="goToRegisterFromLogin()" class="text-blue-600">Sign up</button></div>
+
     </div>
 
 </body>
+
+<!-- js cdn -->
+<script src="./script.js"></script>
 
 </html>

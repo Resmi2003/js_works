@@ -1,36 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <!-- tw cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="w-full h-full">
 
-    <nav class="bg-blue-500 text-white w-full h-[64px] flex justify-between border-b-white border-4">
-        <div class="mt-4 ml-5">
-            <a href="#" class="mr-3">Home</a>
-        <a href="#" class="mr-3">Features</a>
-        <a href="#" class="mr-3">Pricing</a>
-        <a href="#">About</a>
-        </div>
+<body class="min-h-screen text-white">
 
-        <div class="mt-4 mr-60">
-            <a href="#">Logout</a>
-        </div>
-    </nav>
+  <div class="fixed inset-0 bg-cover bg-center blur-sm scale-105" style="background-image: url('./images/bank.jpg');">
+  </div>
+  <div class="fixed inset-0 bg-black/60"></div>
 
-    <div class="min-h-screen bg-[url('./images/debit-card.jpeg')] bg-cover bg-center">
-        <!-- <div class="bg-blue-200 w-[80%] h-[100px]"> -->
+  <nav class="fixed top-0 w-full z-50 bg-blue-600/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- </div> -->
+      <div class="flex">
+        <i class="fa-solid fa-building-columns text-2xl mr-2"></i>
+        <h1 class="text-xl font-semibold tracking-wide mt-1">My Bank</h1>
+      </div>
+
+      <ul class="hidden md:flex gap-8 text-sm">
+        <li class="hover:text-cyan-300 cursor-pointer">Home</li>
+        <li class="hover:text-cyan-300 cursor-pointer">Features</li>
+        <li class="hover:text-cyan-300 cursor-pointer">Pricing</li>
+        <li class="hover:text-cyan-300 cursor-pointer">About</li>
+      </ul>
+
+      <!-- logout -->
+      <button onclick="logout()" class="bg-cyan-400 text-black px-4 py-2 rounded-lg text-sm font-medium">
+        Logout
+      </button>
 
     </div>
+  </nav>
 
-  
-    
-    
+  <main class="relative z-10 pt-28 px-6 max-w-7xl mx-auto">
+
+    <div class="text-center mb-12">
+
+      <!-- welcome-user -->
+      <h2 id="welcome-user" class="text-3xl font-semibold">Welcome User</h2>
+
+      <p class="text-white/70 mt-2">Online Banking Services</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8">
+        <h3 class="text-xl font-semibold mb-6 text-cyan-300">Deposit</h3>
+
+        <!-- dep-acc -->
+        <input id="dep-acc" onfocus="clearDepositResult()" type="text" placeholder="Enter Account Number"
+          class="w-full mb-4 px-4 py-3 rounded-lg bg-white/80 text-black outline-none" />
+
+        <!-- dep-amount -->
+        <input id="dep-amount" onfocus="clearDepositResult()" type="number" placeholder="Enter Amount"
+          class="w-full mb-6 px-4 py-3 rounded-lg bg-white/80 text-black outline-none" />
+
+        <!-- depositAmount -->
+        <button onclick="depositAmount()"
+          class="w-full bg-cyan-400 hover:bg-cyan-500 text-black py-3 rounded-lg font-medium">
+          Deposit
+        </button>
+
+        <!-- deposit-result -->
+        <div id="deposit-result" class="mt-5 p-4 text-xl ml-12 font-semibold text-green-600"></div>
+
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-8">
+        <h3 class="text-xl font-semibold mb-6 text-red-300">Withdraw</h3>
+
+        <!-- with-acc -->
+        <input id="with-acc" onfocus="clearWithdrawResult()" type="text" placeholder="Enter Account Number"
+          class="w-full mb-4 px-4 py-3 rounded-lg bg-white/80 text-black outline-none" />
+
+        <!-- with-amount -->
+        <input id="with-amount" onfocus="clearWithdrawResult()" type="number" placeholder="Enter Amount"
+          class="w-full mb-6 px-4 py-3 rounded-lg bg-white/80 text-black outline-none" />
+
+        <!-- withdrawAmount -->
+        <button onclick="withdrawAmount()"
+          class="w-full bg-red-400 hover:bg-red-500 text-black py-3 rounded-lg font-medium">
+          Withdraw
+        </button>
+
+        <!-- withdraw-result -->
+        <div id="withdraw-result" class="mt-5 p-4 text-xl ml-12 font-semibold text-red-600"></div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="relative z-10 mt-20 bg-blue-600/80 backdrop-blur-md py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-white/80">© 2026 My Bank. All rights reserved.</p>
+
+      <div class="flex gap-4">
+        <input type="email" placeholder="Email address" class="px-4 py-2 rounded-lg text-black outline-none" />
+        <button class="bg-cyan-400 px-4 py-2 rounded-lg text-black font-medium">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
+<!-- js cdn -->
+<script src="./script.js"></script>
+
 </html>

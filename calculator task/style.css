@@ -50,6 +50,7 @@
     height: 40px;
     background-color: #e2e8f0;
     border-radius: 6px;
+    padding-left: 8px;
 }
 
 .box1{
@@ -63,7 +64,7 @@
 
 .buttonparent{
     margin-top: 20px;
-    margin-left: 35px;
+    margin-left: 25px;
 }
 
 .buttonparent button{

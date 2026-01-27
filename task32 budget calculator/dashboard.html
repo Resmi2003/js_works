@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-pink-400 min-h-screen p-6">
+
+    <div class="flex justify-between items-center mb-6">
+
+        <!-- welcome -->
+        <h1 id="welcome" class="text-xl font-semibold text-gray-700"> Welcome</h1>
+
+        <!-- logout -->
+        <button onclick="logout()"
+            class="border border-red-400 text-red-500 px-4 py-1 rounded bg-white font-bold hover:bg-red-500 hover:text-white">
+            Logout <i class="fa-solid fa-power-off"></i>
+        </button>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-10">
+        <span class="text-blue-600">Smart</span>
+        <span class="text-green-600">Wallet</span>
+    </h2>
+
+    <div class="flex gap-10 max-w-6xl mx-auto">
+
+        <div class="w-1/2 bg-green-100 p-6 rounded-xl shadow">
+            <h3 class="text-xl font-semibold text-green-700 text-center mb-4">
+                Add Income
+            </h3>
+
+            <!-- incomeType -->
+            <input id="incomeType" type="text" placeholder="Enter Income Type" class="w-full mb-3 p-2 rounded border">
+
+            <!-- incomeAmount -->
+            <input id="incomeAmount" type="number" placeholder="Enter Amount" class="w-full mb-4 p-2 rounded border">
+
+            <!-- addIncome -->
+            <button onclick="addIncome()" type="button"
+                class="w-full bg-green-600 text-white py-2 rounded font-semibold hover:bg-green-700">
+                Add Income
+            </button>
+
+            <div class="mt-6 bg-orange-200 text-center p-4 rounded-lg">
+                <p class="font-semibold">Total Balance</p>
+
+                <!-- totalBalance -->
+                <p id="totalBalance" class="text-xl font-bold">Rs 0 /-</p>
+            </div>
+        </div>
+
+        <div class="w-1/2 bg-teal-100 p-6 rounded-xl shadow">
+            <h3 class="text-xl font-semibold text-teal-700 text-center mb-4">
+                Add Expense
+            </h3>
+
+            <!-- expenseType -->
+            <input id="expenseType" type="text" placeholder="Enter Expense Type" class="w-full mb-3 p-2 rounded border">
+
+            <!-- expenseAmount -->
+            <input id="expenseAmount" type="number" placeholder="Enter Amount" class="w-full mb-4 p-2 rounded border">
+
+            <!-- addExpenses -->
+            <button onclick="addExpenses()" type="button"
+                class="w-full bg-teal-600 text-white py-2 rounded font-semibold hover:bg-teal-700">
+                Add Expenses
+            </button>
+
+            <div class="mt-6 bg-teal-200 text-center p-4 rounded-lg">
+                <p class="font-semibold">Total Expense</p>
+
+                <!-- totalExpense -->
+                <p id="totalExpense" class="text-xl font-bold">Rs 0 /-</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-14">
+        <!-- clearAll -->
+        <button onclick="clearAll()" class="bg-yellow-400 px-6 py-2 rounded font-semibold hover:bg-yellow-500">
+            Clear All <i class="fa-solid fa-eraser"></i>
+        </button>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto mt-20">
+        <h3 class="text-3xl font-semibold text-center mb-3">Income and Expense Details</h3>
+
+        <div class="mb-8">
+            <h4 class="text-2xl font-semibold text-blue-600 mb-2">Income</h4>
+            <table class="w-full border border-pink-300 text-center bg-white">
+                <thead class="bg-pink-200">
+                    <tr>
+                        <th class="border p-2">Type</th>
+                        <th class="border p-2">Amount</th>
+                        <th class="border p-2">Balance</th>
+                        <th class="border p-2">Date & Time</th>
+                    </tr>
+                </thead>
+
+                <!-- receiptBody -->
+                <tbody id="receiptBody"></tbody>
+            </table>
+        </div>
+
+        <div>
+            <h4 class="text-2xl font-semibold text-blue-600 mb-2">Expense</h4>
+            <table class="w-full border border-pink-300 text-center bg-white">
+                <thead class="bg-pink-200">
+                    <tr>
+                        <th class="border p-2">Type</th>
+                        <th class="border p-2">Amount</th>
+                        <th class="border p-2">Balance</th>
+                        <th class="border p-2">Date & Time</th>
+                    </tr>
+                </thead>
+                <!-- expenseReceiptBody -->
+                <tbody id="expenseReceiptBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+<!-- js cdn -->
+<script src="./dashboard.js"></script>
+
+</html>
