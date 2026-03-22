@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- tw cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-full w-full bg-cyan-100 flex justify-center items-center">
+    <div class="bg-white w-[500px] h-[300px] mt-[50px]">
+        <h1 class="font-bold text-3xl text-center mt-[40px]">Login</h1>
+        <!-- uname -->
+        <input id="uname" type="text" placeholder="Username"
+            class="mt-[20px] pl-[10px] w-[400px] h-[30px] border border-black ml-[45px] rounded-[3px]"></input>
+            <!-- password -->
+        <input type="password" id="password" placeholder="Password"
+            class="mt-[20px] pl-[10px] w-[400px] h-[30px] border border-black ml-[45px] rounded-[3px]"></input><br>
+        <div class="text-center mt-[40px]"><button onclick="login()" class="w-[60px] h-[40px] bg-indigo-600 font-semibold rounded-[5px]">Login</button>
+        </div>
+
+
+
+</body>
+
+<script>
+    function login(){
+        const username = document.getElementById('uname').value;
+        // console.log(username);
+        const password = document.getElementById('password').value;
+        // console.log(password);
+
+        localStorage.setItem('uname',username);
+
+        window.location = './dash.html';
+        
+        
+    }
+</script>
+
+</html>

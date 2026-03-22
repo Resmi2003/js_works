@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+</head>
+<body>
+
+<h2>Register</h2>
+
+<input id="ruser" type="text" placeholder="Username"><br><br>
+<input id="rpass" type="password" placeholder="Password"><br><br>
+
+<button onclick="register()">Register</button>
+
+<script>
+function register() {
+    let username = ruser.value;
+    let password = rpass.value;
+
+    // validation
+    if (username === "" || password === "") {
+        alert("Please enter all fields");
+        return;
+    }
+
+    // check existing user
+    if (username in localStorage) {
+        alert("User already exists");
+        return;
+    }
+
+    // store in localStorage
+    localStorage.setItem(username, password);
+    alert("Registration successful");
+
+    // clear inputs
+    ruser.value = "";
+    rpass.value = "";
+}
+</script>
+
+</body>
+</html>

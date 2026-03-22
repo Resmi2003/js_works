@@ -24,7 +24,8 @@
                 const data = await response.json();        // asynchronous function useyyumbo ulla time delay handle cheyyan useyyunnathanu await.
                 return data;
                 
-            }catch(error){
+            }
+            catch(error){
                 console.error("error",error);
                 throw error;
 
@@ -37,7 +38,7 @@
 
        async function displayPost() {
         const posts = await fetchPost();
-       //  console.log(posts);
+        // console.log(posts);
        const cardContainer = document.getElementById('card-container');
        const cardsHtml = posts.map(post=>
         ` <div class="w-full h-full mt-10">

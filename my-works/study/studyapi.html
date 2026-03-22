@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <center>
+        <table class="border border-3 border-blue-700 mt-[20px]">
+            <thead>
+                <tr>
+                    <th class="border border-3 border-blue-700 p-3">Id</th>
+                    <th class="border border-3 border-blue-700 p-3">Name</th>
+                    <th class="border border-3 border-blue-700 p-3">username</th>
+                    <th class="border border-3 border-blue-700 p-3">email</th>
+                    <th class="border border-3 border-blue-700 p-3">address</th>
+                </tr>
+            </thead>
+
+            <tbody id="result"></tbody>
+        </table>
+    </center>
+
+    <script>
+
+        
+// 1. create a new XMLHTTPRequest Object
+const response = new XMLHttpRequest();
+
+// //2. connect to API call
+response.open('get','https://jsonplaceholder.typicode.com/users');
+
+// 3. send
+response.send();
+
+// 4. set onreadystatechange
+response.onreadystatechange = () => {
+    if(response.readyState==4){
+        if(response.status>199 && response.status<300){
+            console.log(response.responseText);
+            
+            const usersArray = JSON.parse(response.responseText);
+            console.log(usersArray);
+            displayData(usersArray);
+            
+        }
+    }
+}
+
+//5. display array of data into browser
+function displayData(usersArray){
+    for(let user of usersArray){
+        htmlData = `
+                    <tr>
+                        <td class="border border-3 border-blue-700 p-3">${user.id}</td>
+                        <td class="border border-3 border-blue-700 p-3">${user.name}</td>
+                        <td class="border border-3 border-blue-700 p-3">${user.username}</td>
+                        <td class="border border-3 border-blue-700 p-3">${user.email}</td>
+                        <td class="border border-3 border-blue-700 p-3">${user.address.street}<br>${user.address.city}</td>
+                    </tr>
+        `
+
+        result.innerHTML += htmlData;
+    }
+}
+
+    </script>
+    
+</body>
+</html>

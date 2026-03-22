@@ -12,22 +12,28 @@ console.log(typeof(rating)); //number
 
 var data = null;
 // console.log(typeof(data)==null);
-console.log(typeof(data));
+console.log(typeof(data));   // object
 
 
-console.log(typeof("resmi"));
+console.log(typeof("resmi"));  // string
 
-console.log(typeof a);
+console.log(typeof a); // undefined
+ 
+console.log(typeof(null));  // object
 
-console.log(typeof(null));
+console.log(typeof(undefined)); // undefined
 
-console.log(typeof(undefined));
+console.log(typeof true);  // boolean
 
-console.log(typeof true);
+console.log(typeof(number));  // undefined
 
-console.log(typeof(number));
+console.log(typeof(null=="object"));  // boolean
 
-console.log(typeof(null=="object"));
+console.log(typeof(a));  // undefined
+
+console.log(typeof(true));   // boolean
+
+
 
 
 

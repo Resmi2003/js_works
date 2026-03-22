@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Input box to enter the task -->
+<input type="text" id="taskInput">
+
+<!-- Button to add task -->
+<button onclick="addTask()">Add</button>
+
+<!-- Unordered list to display tasks -->
+<ul id="taskList"></ul>
+
+
+
+<script>
+
+function addTask() {
+
+    // Get the text entered in the input box
+    var taskValue = document.getElementById("taskInput").value;
+
+    // Create a new list item element (CREATE)
+    var listItem = document.createElement("li");
+
+    // Set the task text inside the list item
+    listItem.innerText = taskValue;
+
+    // Create Edit button
+    var editButton = document.createElement("button");
+
+    // Set text for Edit button
+    editButton.innerText = "Edit";
+
+    // Function to edit the task
+    editButton.onclick = function () {
+
+        // Ask user to enter updated task
+        var updatedTask = prompt("Edit task");
+
+        // Create a new list item for updated task (CREATE)
+        var newListItem = document.createElement("li");
+
+        // Set updated task text
+        newListItem.innerText = updatedTask;
+
+        // Add Edit button again
+        newListItem.appendChild(editButton);
+
+        // Add Delete button again
+        newListItem.appendChild(deleteButton);
+
+        // Replace old task with updated task (UPDATE)
+        document.getElementById("taskList")
+        .replaceChild(newListItem, listItem);
+
+        // Update reference to new list item
+        listItem = newListItem;
+    };
+
+    // Create Delete button
+    var deleteButton = document.createElement("button");
+
+    // Set text for Delete button
+    deleteButton.innerText = "Delete";
+
+    // Function to delete the task
+    deleteButton.onclick = function () {
+
+        // Remove the selected task from list (DELETE)
+        document.getElementById("taskList")
+        .removeChild(listItem);
+    };
+
+    // Add Edit button to list item
+    listItem.appendChild(editButton);
+
+    // Add Delete button to list item
+    listItem.appendChild(deleteButton);
+
+    // Add the list item to the task list (DISPLAY)
+    document.getElementById("taskList")
+    .appendChild(listItem);
+
+    // Clear input box after adding task
+    document.getElementById("taskInput").value = "";
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+<!-- DOM METHODS USED
+
+createElement()
+→ Creates new HTML elements dynamically.
+
+appendChild()
+→ Adds an element to the DOM.
+
+replaceChild()
+→ Replaces an existing element with a new one.
+
+removeChild()
+→ Removes an element from the DOM.
+
+
+

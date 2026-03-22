@@ -41,7 +41,6 @@
 
     // 2. Display content in html    // this is same step we do in api-call.html(AJAX).
     function displayContent(todos){  // need to pass todos as argument inside displayContent function then call function. then only it will display.
-        htmlData = ``; // empty string  
         for(let todo of todos){      // for loop to take each object one by one from array. // htmlData is a variable, if put without var also work. // in the td class, things we put like todo.userId, todo.Id etc must be same as the data we put from jsonplaceholder, because that's our data. if anything put wrong, then it will not work. so copy from that data and paste here.
             htmlData = ` <tr> 
                 <td class="border border-3 border-black">${todo.userId}</td>
